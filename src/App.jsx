@@ -13,6 +13,12 @@ import ListaAlunos from './components/repeticao/ListaAlunos'
 import TabelaProduto from './components/repeticao/TabelaProduto'
 import ParOuImpar from './components/condicional/ParOuImpar'
 import UsuarioInfo from './components/condicional/UsuarioInfo'
+import DiretaPai from './components/comunicacao/DiretaPai'
+import IndiretaPai from './components/comunicacao/IndiretaPai'
+import Input from './components/formulario/Input'
+import Contador from './components/contador/Contador'
+import ContadorComponent from './components/contador/ContadorComponent'
+
 
 
 export default function App(){
@@ -20,6 +26,26 @@ export default function App(){
         <div className="app">
             <h1>Fundamento React</h1>
             <div className="cards">
+                <Card titulo="#13 - Contador Componentizado (input)" color="#FF4C65">  
+                    <ContadorComponent numeroInicial={10}></ContadorComponent>
+                </Card>
+
+                <Card titulo="#12 - Contador (input)" color="#FF4C65">
+                    <Contador numeroInicial={10}></Contador>
+                </Card>
+
+                <Card titulo="#11 - Componente controlado (input)" color="#FF4C65">
+                    <Input></Input>
+                </Card>
+
+                <Card titulo="#10 - Comunicação indireta" color="#FF4C65">
+                    <IndiretaPai></IndiretaPai>
+                </Card>
+                
+                <Card titulo="#09 - Comunicação direta" color="#FF4C65">
+                    <DiretaPai></DiretaPai>
+                </Card>
+
                 <Card titulo="#08 - Condicional renderização" color="#FF4C65">
                     <UsuarioInfo usuario={{ nome:'Matheus' }}/>
                     <ParOuImpar numero={20}></ParOuImpar>
