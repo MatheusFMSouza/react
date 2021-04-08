@@ -1,0 +1,16 @@
+.Mega table{
+    width: 100%;
+}
+
+.Mega th{
+    background-color: blue;
+    color: #fff;
+}
+
+.Mega .Par{
+    background-color: #ddd;
+}
+
+.Mega .Impar{
+    background-color: #ccc;
+}

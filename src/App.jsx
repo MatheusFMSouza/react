@@ -18,7 +18,7 @@ import IndiretaPai from './components/comunicacao/IndiretaPai'
 import Input from './components/formulario/Input'
 import Contador from './components/contador/Contador'
 import ContadorComponent from './components/contador/ContadorComponent'
-
+import Mega from './components/mega/Mega'
 
 
 export default function App(){
@@ -26,6 +26,9 @@ export default function App(){
         <div className="app">
             <h1>Fundamento React</h1>
             <div className="cards">
+                <Card titulo="#14 - Desafio Mega" color="#FF4C65">  
+                    <Mega numero={6}></Mega>
+                </Card>
                 <Card titulo="#13 - Contador Componentizado (input)" color="#FF4C65">  
                     <ContadorComponent numeroInicial={10}></ContadorComponent>
                 </Card>
