@@ -27,7 +27,7 @@ export default function App(){
             <h1>Fundamento React</h1>
             <div className="cards">
                 <Card titulo="#14 - Desafio Mega" color="#FF4C65">  
-                    <Mega numero={6}></Mega>
+                    <Mega numero={10}></Mega>
                 </Card>
                 <Card titulo="#13 - Contador Componentizado (input)" color="#FF4C65">  
                     <ContadorComponent numeroInicial={10}></ContadorComponent>

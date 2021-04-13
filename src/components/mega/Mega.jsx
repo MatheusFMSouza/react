@@ -8,11 +8,7 @@ export default function Mega(props) {
         for(var cont =0; cont< qtdDeNumeros; cont ++){
             numerosGerados.push(recursivoGeradorDeNumero(numerosGerados))
         }
-        let numeroOdernados = numerosGerados.sort(function(a,b){
-                                            if(a>b) return 1
-                                            if(a<b) return -1
-                                            return 0
-                                        })
+        let numeroOdernados = numerosGerados.sort((n1,n2) => n1 - n2)
 
         return montaTabela(numeroOdernados)
     }
@@ -32,16 +28,9 @@ export default function Mega(props) {
         const min = 1
         const max = 60
         const numeroGerado = parseInt(Math.random() * (max - min)) + min
-        if(validarNumero(numerosGerados, numeroGerado) && !numeroGerado){
-            recursivoGeradorDeNumero(numerosGerados)
-        }else{
-            return numeroGerado
-        }
+        return numerosGerados.includes(numeroGerado) ? recursivoGeradorDeNumero(numerosGerados) : numeroGerado
     }
     
-    function validarNumero (numerosGerados, numero) {
-       return numerosGerados ? numerosGerados.find(numeroGerado => numeroGerado === numero)? true : false : false
-    }
 
     return(
         <div className="Mega">
